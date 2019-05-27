@@ -1,0 +1,27 @@
+
+body {  
+  text-align: justify;  
+}
+
+.titulo{
+  margin: 20px 0px;
+}
+
+.card-body{
+  border: 1px solid black;
+  padding: 30px;
+  background: #747F7F;
+  color: white;
+}
+
+.card-body > p{
+  color: rgba(255,255,255,.5)!important;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Projeto - Eliel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/projeto-contato.css" rel="stylesheet">
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home                
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cards.html">Sobre</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contato</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+                <h2 class="card-title text-center">Contato</h2>
+                <form class="form-signin">
+                    <div class="form-label-group">
+                        <label>Nome</label>
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" required>
+                    </div>
+
+                    <div class="form-label-group">
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
+                    </div>
+
+                    <div class="form-label-group">
+                        <label>Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Mensagem"></textarea>
+                    </div>
+                    <input class="btn btn-lg btn-success btn-block text-uppercase" value="Enviar" id="enviar">
+                </form>
+                <div id="resultado"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $("#enviar").click(function(){
+                var x = $("form").serializeArray();
+                $("#resultado").text('Nome: '+ x[0].value +' Email: '+ x[1].value +' Mensagem: '+ x[2].value);
+            });
+        });
+    </script>
+
+</body>
+</html>
